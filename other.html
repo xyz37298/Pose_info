@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>POSE_3</title>
+<style>
+    body{ background-color :black }
+    #galleryCont { text-align: center;}
+    button{border:0; outline: 0; background : none;}
+</style>
+</head>
+
+<SCRIPT language="javascript">
+    var num = 1;
+    function changePic(idx){
+        if (idx) {
+            if (num == 40) return;
+            num++;
+        }else{
+            if (num == 1) return;
+            num--;
+        }
+        var imgTag = document.getElementById("photo");
+        imgTag.setAttribute("src", "img" + num + ".jpeg");
+    }
+
+</SCRIPT>
+
+<body>
+
+    <div id="galleryCont" style="position: relative; ">
+        <p><img src="img1.jpeg" id="photo" width = 100% height = 100%></p>
+    </div>
+
+    <div style="position: absolute; top: 500px; left:30px;">
+        <button onclick="changePic(0);" > <img src = "bLeft.png" width = 70px> </button>
+    </div>
+
+    <div style="position: absolute; top: 500px; left:1700px;">
+        <button onclick="changePic(1);" > <img src = "bRight.png" width = 70px> </button>
+    </div>
+
+    <div style="position: absolute; top: 10px; left:20px;">
+       <a href = "index.html"><img src = "b_ui.png" width = 50px></a>
+    </div>
+
+</body>

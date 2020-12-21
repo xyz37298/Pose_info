@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>POSE_3</title>
+
+<style>
+    body{ background-color :black }
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="form.css" />
+</head>
+<SCRIPT language="javascript">
+function image_onclick(){
+	var arrImage=new Array("4.jpg", "6.jpg", "8.jpg", "10.jpg", "12.jpg", "14.jpg", "16.jpg", "18.jpg", "20.jpg", "22.jpg", "24.jpg", "26.jpg", "28.jpg", "30.jpg",
+    "01.png","02.png", "03.png", "04.png", "05.png", "06.png", "07.png", "08.png", "09.png","10.png","11.png","12.png","13.png","14.png","15.png","16.png","17.png",
+    "18.png","19.png","20.png","21.png","22.png","23.png","24.png","25.png","26.png","27.png","28.png","29.png","30.png","31.png"
+    );
+	var imgSource=document.targetImg;
+	var intRandom=Math.round(Math.random()*44);
+
+	while(imgSource.src.indexOf(arrImage[intRandom]) != -1){
+		intRandom=Math.round(Math.random()*44);
+	}
+	
+	imgSource.src=arrImage[intRandom];
+}
+
+function sub_onclick(){
+    var arrSub=new Array("s.png", "s2.png", "s3.png", "s4.png", "s5.png", "s6.png", "s7.png", "s8.png", "s9.png", "s10.png", 
+    "s11.png", "s12.png", "s13.png", "s14.png", "s15.png", "s16.png", "s17.png", "s18.png", "s19.png", "s20.png", 
+    "s21.png", "s22.png", "s23.png", "s24.png", "s25.png", "s26.png", "s27.png", "s28.png", "s29.png", "s30.png", 
+    "s31.png", "s32.png", "s33.png", "s34.png", "s35.png", "s36.png", "s37.png", "s38.png", "s39.png", "s40.png", 
+    "s41.png", "s42.png", "s43.png", "s44.png", "s45.png", "s46.png", "s47.png", "s48.png", "s49.png", "s50.png", 
+    "s51.png", "s52.png", "s53.png", "s54.png", "s55.png"
+    );
+    var subSource=document.targetSub;
+    var intRandom=Math.round(Math.random()*54);
+
+    while(subSource.src.indexOf(arrSub[intRandom]) != -1){
+        intRandom=Math.round(Math.random()*54);
+    }
+
+    subSource.src=arrSub[intRandom];
+}
+</SCRIPT>
+
+<body>
+
+<div>
+    <div style="position: absolute;">
+        <div style="position: relative; top: 20px; left:50;">
+            <a href = "start.html"><image name="title" src='title.png' width = "550" margin-top = "15px"></a>
+        </div>
+
+        <div style="position: relative; top: -185px; left:650px;">
+            <image src="info.png" width = "1100"></image>
+        </div>
+
+    </div>
+
+    <div style="position: absolute;">
+        <div style="position: relative; top: 200px; left: 60px;">
+            <image name="targetImg" src='4.jpg' onclick="image_onclick()" width ="1300" >
+        </div>
+    </div>
+
+    <div style= "position: absolute;">
+        <div style="position: relative; top: 518px; left: 240px;">
+            <image name="targetSub" src='s.png' onclick="sub_onclick()" width = "1660">
+        </div>
+    </div>
+
+
+    <div style="position: absolute;">
+        <div style="position: relative; top: 940px; left:60px; ">
+            <image name="UI" src="u_bar.png" width = "1300"></image>
+        </div>
+
+        <div style="position: relative; top: 130px; left:70px;">
+            <a href = "start.html"><image name="b" src="b_ui.png" width = "60"></image></a>
+        </div>
+
+        <div style="position: relative; top: 90px; left:1400px; ">
+            <image name="menu" src="menu.png" width = "400"></image>
+        </div>
+
+        <div style="position: relative; top: 500px; left:1402px; ">
+            <a href="other.html"><image src="line.png" width = "400"></image></a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+
+</html>
